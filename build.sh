@@ -9,7 +9,7 @@ BIN_DIR="bin"
 
 # Remove old build directories
 echo "Cleaning previous builds..."
-rm -rf "$BUILD_DIR" "$BIN_DIR"
+rm -rf "$BUILD_DIR" "$BIN_DIR" "./compile_commands.json"
 
 # Create necessary directories
 mkdir -p "$BUILD_DIR/Debug" "$BUILD_DIR/Release"
@@ -27,6 +27,8 @@ build_config() {
 # Build Debug and Release
 build_config Debug
 build_config Release
+
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 echo "Build complete!"
 echo "Executables:"

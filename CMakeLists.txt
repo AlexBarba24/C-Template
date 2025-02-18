@@ -6,6 +6,8 @@ set(PROGRAM_NAME main)
 # Define the source file
 set(SOURCE_FILES src/main.c)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 # Include the headers
 include_directories(include)
 
